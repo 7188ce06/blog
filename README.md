@@ -40,6 +40,8 @@ Press Ctrl-C to stop it.
   ```
 
 - **A literal dollar sign:** write `\$5`.
+- **Indenting a section:** put `{{< indent >}}` on a line before it and `{{< /indent >}}` on a line after it.
+  Everything inside still works as usual, math included. (Indenting lines with Tab instead turns them into a code box.)
 - **Footnotes:** write `like this.[^1]` in the text, and anywhere below it put `[^1]: The footnote text.`
 - **Typos in math** show up in red on the page instead of breaking the site.
 - **Quotes and dashes:** straight quotes become curly quotes, and `---` becomes an em dash (—).

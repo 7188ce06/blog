@@ -92,6 +92,8 @@ blockquote {
   color: var(--muted);
 }
 
+.indent { margin-left: 2rem; }
+
 hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
 
 code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; }
@@ -119,4 +121,5 @@ sup a { text-decoration: none; }
 @media (max-width: 30rem) {
   body { font-size: 1.0625rem; padding-top: 1.25rem; }
   h1 { font-size: 1.6rem; }
+  .indent { margin-left: 1rem; }
 }

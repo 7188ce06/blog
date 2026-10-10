@@ -1,0 +1,4 @@
+{{- /* Indents a section: {{< indent >}} ... {{< /indent >}}. The inside is ordinary Markdown, math included. */ -}}
+<div class="indent">
+{{ .Inner | .Page.RenderString (dict "display" "block") }}
+</div>
