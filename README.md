@@ -24,9 +24,9 @@ To remove one, open the file on GitHub, click **⋯**, then **Delete file**.
 
 ## Previewing
 
-Double-click `preview.command` in Finder. The site opens at http://localhost:1313 and updates every time you save a file.
+Run `./preview` in this folder. The site opens at http://localhost:1313 and updates every time you save a file.
 Posts with `draft: true` under `title:` show up in the preview but are never published.
-Close the Terminal window to stop the preview.
+Press Ctrl-C to stop it.
 
 ## Writing
 

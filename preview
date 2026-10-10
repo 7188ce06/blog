@@ -1,7 +1,6 @@
 #!/bin/sh
 # Preview the blog at http://localhost:1313. The page updates every time you save a file,
-# and posts marked `draft: true` are shown here (but never published).
-# Double-click this file in Finder, or run ./preview.command. Close the window to stop.
+# and posts marked `draft: true` are shown here (but never published). Ctrl-C stops it.
 cd "$(dirname "$0")" || exit 1
 HUGO="${HUGO:-$HOME/.local/bin/hugo}"
 if [ ! -x "$HUGO" ]; then
