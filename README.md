@@ -22,6 +22,12 @@ The **Actions** tab shows progress: a green check means it's live, a red X means
 To change a post, upload a new version with the same file name, or click the pencil icon on the file in GitHub.
 To remove one, open the file on GitHub, click **⋯**, then **Delete file**.
 
+## Previewing
+
+Double-click `preview.command` in Finder. The site opens at http://localhost:1313 and updates every time you save a file.
+Posts with `draft: true` under `title:` show up in the preview but are never published.
+Close the Terminal window to stop the preview.
+
 ## Writing
 
 - **Inline math:** `$|a_n| \le M$`
