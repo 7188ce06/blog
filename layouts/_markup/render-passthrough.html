@@ -1,0 +1,10 @@
+{{- /* Renders $...$ and $$...$$ with KaTeX at build time. A typo shows up in red on the page instead of failing the build. */ -}}
+{{- $opts := dict "output" "htmlAndMathml" "displayMode" (eq .Type "block") "throwOnError" false "strict" "ignore" }}
+{{- with try (transform.ToMath .Inner $opts) }}
+  {{- with .Err }}
+    {{- warnf "Could not render math %q (%s): %s" $.Inner $.Position . }}
+    <code class="math-error">{{ $.Inner }}</code>
+  {{- else }}
+    {{- .Value }}
+  {{- end }}
+{{- end -}}

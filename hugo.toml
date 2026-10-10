@@ -1,0 +1,34 @@
+# Site settings. Change `title` and `description` to whatever you like.
+# The address (baseURL) is filled in automatically when GitHub builds the site.
+baseURL = 'https://example.org/'
+title = 'Untitled Blog'
+locale = 'en-US'
+timeZone = 'America/New_York'
+disableKinds = ['taxonomy', 'term']
+
+# Publish a post as soon as it's uploaded, even if its file name has a later date.
+buildFuture = true
+
+[params]
+  description = 'Essays on mathematics and philosophy.'
+
+# A post's date and URL come from its file name:
+# content/posts/2026-10-12-some-title.md -> dated Oct 12, 2026, at /2026/10/some-title/
+[frontmatter]
+  date = [':filename', ':default']
+  publishDate = [':filename', ':default']
+
+[permalinks.page]
+  posts = '/:year/:month/:slug/'
+
+[[menus.main]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 10
+
+# Math: $...$ inline, $$...$$ on its own lines for display. Rendered when the site is built.
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['$$', '$$'], ['\[', '\]']]
+    inline = [['$', '$'], ['\(', '\)']]

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article>
+  <header class="post-header">
+    <h1>{{ .Title | .RenderString }}</h1>
+    {{- if eq .Section "posts" }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    {{- end }}
+  </header>
+  {{ .Content }}
+</article>
+{{ end }}

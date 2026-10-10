@@ -1,0 +1,16 @@
+{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- range $posts.GroupByDate "2006" }}
+<section class="year">
+  <h2>{{ .Key }}</h2>
+  <ul class="post-list">
+    {{- range .Pages }}
+    <li>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+      <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- else }}
+<p>No posts yet.</p>
+{{- end }}
